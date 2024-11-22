@@ -9,15 +9,17 @@ public class Account {
         return owner;
     }
 
-    public void setOwner(Person owner) {
+    public Account setOwner(Person owner) {
         this.owner = owner;
+        return this;
     }
 
     public Integer getBalance() {
         return balance;
     }
 
-    public void setBalance(Integer balance) {
+    public Account setBalance(Integer balance) {
         this.balance = balance;
+        return this;
     }
 }
