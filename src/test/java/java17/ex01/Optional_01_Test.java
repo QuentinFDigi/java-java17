@@ -47,6 +47,6 @@ public class Optional_01_Test {
         
         // TODO si la personne n'existe pas, jeter une exception NotPresentException
         // TODO utiliser la méthode "orElseThrow"
-        Person oldPerson = persons.stream().filter(person -> person.getAge() >= 75).findFirst().orElseThrow(NotPresentException::new);
+        optPerson.orElseThrow(NotPresentException::new);
     }
 }
