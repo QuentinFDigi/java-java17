@@ -11,6 +11,11 @@ import java17.data.domain.Gender;
 import java17.data.domain.Order;
 import java17.data.domain.Pizza;
 
+import java17.data.domain.Customer;
+import java17.data.domain.Gender;
+import java17.data.domain.Order;
+import java17.data.domain.Pizza;
+
 public class Data {
 
 	private List<Pizza> pizzas;
