@@ -8,10 +8,7 @@ import java17.data.domain.Gender;
 import java17.data.domain.Order;
 import java17.data.domain.Pizza;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.*;
@@ -30,7 +27,7 @@ public class Stream_03_Test {
 		List<Order> orders = new Data().getOrders();
 
 		// TODO Retrouver la commande avec le prix le plus élevé
-		Optional<Order> result = null;
+		Optional<Order> result = orders.stream().max(Comparator.comparing(Order::getPrice));
 
 		assertThat(result.isPresent(), is(true));
 		assertThat(result.get().getPrice(), is(2200.0));
@@ -42,7 +39,7 @@ public class Stream_03_Test {
 		List<Order> orders = new Data().getOrders();
 
 		// TODO Retrouver la commande avec le prix le moins élevé
-		Optional<Order> result = null;
+		Optional<Order> result = orders.stream().min(Comparator.comparing(Order::getPrice));
 
 		assertThat(result.isPresent(), is(true));
 		assertThat(result.get().getPrice(), is(1000.0));
